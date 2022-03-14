@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <script>
+
+        function groupSort(arr) {
+            // Write your code here
+            
+
+        }
+        function main(arr,n) {
+    
+            // const ws = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+            // const arrCount = parseInt(readLine().trim(), 10);
+
+            // let arr = [];
+            // let arrCount = [5,5,5,5, 4,4,4,3,3]
+
+            let visited = Array.from({length:n}, (_,i)=>false)
+            
+
+            for(let i=0; i<n;i++){
+                for (let i = 0; i < n; i++) {
+                    // arr.push(i);
+                    // console.log(arr);
+                    let count = 1;
+                    for(let j=i+1;j<n; j++){
+                        if(arr[i]==arr[j]){
+                            visited[j]=true;
+                            count++;
+                        }
+                    }
+                    console.log(arr[i] +count);
+                }
+            }
+
+            let arr = [10,20,20,10,20,5,5,20];
+            let n= arr.length;
+            console.log(n);
+
+            console.log(result);
+
+        }
+        main();
+
+        // process.stdin.resume();
+        // process.stdin.setEncoding('utf-8');
+
+        // const fs = require('fs');
+        // const fileOut = fs.createWriteStream(process.env.OUTPUT_PATH);
+
+
+        // /*
+        // * Write the regular expression in the blank space below
+        // */
+        // const regularExpression = new RegExp("________");
+        // let input = '';
+        // process.stdin.on('data', (data) => {
+        //     input += data;
+        //     console.log(input)
+        // });
+
+        // process.stdin.on('end', () => {
+        //     input = input.split('\n');
+
+        //     const query = parseInt(input[0]);
+        //     let result = Array(query).fill('False');
+            
+        //     input.shift();
+            
+        //     for (const i in input) {
+        //         const someString = input[i];
+                
+        //         if (regularExpression.test(someString)) {
+        //             result[i] = 'True';
+        //         }
+        //     }
+            
+        //     result.forEach((res) => {
+        //         fileOut.write(res + '\n');
+        //     });
+            
+        //     fileOut.end();
+        // });
+    </script>
+</body>
+</html>
