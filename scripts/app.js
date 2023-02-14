@@ -4,6 +4,7 @@ let locationDetails = document.querySelector('.details');
 let dayTimeImage = document.querySelector('img.time');
 let iconImage = document.querySelector('.icon img');
 
+
 let updateUI=(data)=>{
     const {cityDetails, weatherDetails} = data;
     
